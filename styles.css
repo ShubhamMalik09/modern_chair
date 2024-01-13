@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 body{
+    font-family: "Poppins",sans-serif;
     font-weight: 400;
     font-size: 15px;
     line-height: 1.7;
@@ -57,6 +58,7 @@ body{
     z-index: 10;
 }
 .color-btn:checked + label{
+    border: solid ;
     border-color: #1f1f1f;
     transform: scale(1.1);
 }
@@ -134,4 +136,189 @@ label.color6{
 }
 .for-6:checked ~.img-wrap.chair6{
     opacity: 1;
+}
+
+.back-color{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-image: linear-gradient(196deg,#f1a9a9,#e66767);
+    transition: all 250ms linear;
+    transition-delay: 300ms;
+} 
+
+.back-color.chair2{
+    background-image: linear-gradient(196deg,#4c4c4c,#262626);
+    opacity:0;
+}
+.for-2:checked ~.back-color.chair2{
+    opacity: 1;
+}
+
+.back-color.chair3{
+    background-image: linear-gradient(196deg,#8a9fb2,#5f7991);
+    opacity:0;
+}
+.for-3:checked ~.back-color.chair3{
+    opacity: 1;
+}
+
+.back-color.chair4{
+    background-image: linear-gradient(196deg,#97afc3,#6789a7);
+    opacity:0;
+}
+.for-4:checked ~.back-color.chair4{
+    opacity: 1;
+}
+
+.back-color.chair5{
+    background-image: linear-gradient(196deg,#afa6a0,#8c7f76);
+    opacity:0;
+}
+.for-5:checked ~.back-color.chair5{
+    opacity: 1;
+}
+
+.back-color.chair6{
+    background-image: linear-gradient(196deg,#aaadac,#838786);
+    opacity:0;
+}
+.for-6:checked ~.back-color.chair6{
+    opacity: 1;
+}
+
+.info{
+    position: relative;
+    margin-left: 500px;
+    z-index: 10;
+    display: block;
+    text-align: left;
+}
+
+.title{
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    line-height: 1.2;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+h2{
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 1.2;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+h4{
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.2;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+h4 span{
+    text-decoration: line-through;
+    font-size: 20px;
+    opacity: 0.6;
+    padding-left: 15px;
+}
+
+h5{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.desc-btn:checked+label,
+.desc-btn:not(:checked)+label{
+    position: relative;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #fff; 
+    margin-right: 25px;
+    opacity: 0.5;
+}
+
+.desc-btn:checked+label{
+    opacity: 1;
+}
+.desc-btn:not(:checked)+label:hover{
+    opacity: 0.8;
+}
+
+.section{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transform: translateY(20px);
+}
+
+.section.sec2{
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+#desc1:checked ~.section.sec1{
+    opacity: 1;
+    pointer-events: auto;
+}
+#desc2:checked ~.section.sec2{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.section-inline{
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+}
+.section-inline p span{
+    font-size: 30px;
+    line-height: 1.1;
+}
+
+.btn{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 2;
+    height: 48px;
+    border-radius: 4px;
+    width: 210px;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: transparent;
+    box-shadow: 0 6px 15px 0 rgba(16, 39, 112, 0.15);
+    margin-top: 50px; 
+    color: #fff;
+}
+
+.cart-btn{
+    z-index: 2;
+    position: relative;
+    left: 550px;
 }
